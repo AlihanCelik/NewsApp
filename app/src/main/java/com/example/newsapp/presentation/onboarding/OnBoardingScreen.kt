@@ -1,4 +1,4 @@
-package com.example.presentation.onboarding
+package com.example.newsapp.presentation.onboarding
 
 import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.layout.Arrangement
@@ -18,12 +18,12 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import com.example.presentation.Dimens.MediumPadding2
-import com.example.presentation.Dimens.PageIndicatorWidth
-import com.example.presentation.common.NewButton
-import com.example.presentation.common.NewTextButton
-import com.example.presentation.onboarding.components.OnBoardingPage
-import com.example.presentation.onboarding.components.PageIndicator
+import com.example.newsapp.presentation.Dimens.MediumPadding2
+import com.example.newsapp.presentation.Dimens.PageIndicatorWidth
+import com.example.newsapp.presentation.common.NewButton
+import com.example.newsapp.presentation.common.NewTextButton
+import com.example.newsapp.presentation.onboarding.components.OnBoardingPage
+import com.example.newsapp.presentation.onboarding.components.PageIndicator
 import kotlinx.coroutines.launch
 
 @OptIn(ExperimentalFoundationApi::class)

@@ -1,4 +1,4 @@
-package com.example.presentation.onboarding.components
+package com.example.newsapp.presentation.onboarding.components
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
@@ -11,8 +11,8 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
-import com.example.presentation.Dimens.IndicatorSize
-import com.example.ui.theme.BlueGray
+import com.example.newsapp.presentation.Dimens.IndicatorSize
+import com.example.newsapp.theme.BlueGray
 
 @Composable
 fun PageIndicator(
@@ -20,7 +20,7 @@ fun PageIndicator(
     pageSize:Int,
     selectedPage:Int,
     selectedColor:Color=MaterialTheme.colorScheme.primary,
-    unselectedColor:Color=BlueGray
+    unselectedColor:Color= BlueGray
 ){
     Row(modifier=Modifier, horizontalArrangement = Arrangement.SpaceBetween) {
         repeat(pageSize){page->

@@ -1,4 +1,4 @@
-package com.example.presentation.common
+package com.example.newsapp.presentation.common
 
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Button

@@ -1,4 +1,4 @@
-package com.example.presentation.onboarding
+package com.example.newsapp.presentation.onboarding
 
 import androidx.annotation.DrawableRes
 import com.example.newsapp.R
