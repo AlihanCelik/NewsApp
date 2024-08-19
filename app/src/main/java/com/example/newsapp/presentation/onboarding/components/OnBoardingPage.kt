@@ -8,7 +8,7 @@ import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
-import androidx.compose.material.Text
+import androidx.compose.material3.Text
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
@@ -22,7 +22,7 @@ import com.example.newsapp.presentation.Dimens.MediumPadding1
 import com.example.newsapp.presentation.Dimens.MediumPadding2
 import com.example.newsapp.presentation.onboarding.Page
 import com.example.newsapp.presentation.onboarding.pages
-import com.example.newsapp.theme.NewsAppTheme
+import com.example.newsapp.ui.theme.NewsAppTheme
 
 @Composable
 fun OnBoardingPage(
