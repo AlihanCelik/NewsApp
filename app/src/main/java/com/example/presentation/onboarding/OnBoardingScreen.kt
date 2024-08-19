@@ -20,6 +20,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import com.example.presentation.Dimens.MediumPadding2
 import com.example.presentation.Dimens.PageIndicatorWidth
+import com.example.presentation.common.NewButton
 import com.example.presentation.common.NewTextButton
 import com.example.presentation.onboarding.components.OnBoardingPage
 import com.example.presentation.onboarding.components.PageIndicator
@@ -63,7 +64,7 @@ fun OnBoardingScreen(){
 
             Row(verticalAlignment = Alignment.CenterVertically) {
                 val scope = rememberCoroutineScope()
-                if (buttonState.value[0].isNullOrEmpty()) {
+                if (buttonState.value[0].isNotEmpty()) {
                     NewTextButton(text = buttonState.value[0],
                         onClick = {
                             scope.launch {
@@ -73,12 +74,12 @@ fun OnBoardingScreen(){
 
 
                 }
-                NewTextButton(text = buttonState.value[1],
+                NewButton(text = buttonState.value[1],
                     onClick = {
                         scope.launch {
                             if (pagerState.currentPage == 3) {
 
-                            } else {
+                            } else  {
                                 pagerState.animateScrollToPage(page = pagerState.currentPage + 1)
                             }
 
@@ -86,5 +87,6 @@ fun OnBoardingScreen(){
                     })
             }
         }
+        Spacer(modifier = Modifier.weight(0.5f))
     }
 }
