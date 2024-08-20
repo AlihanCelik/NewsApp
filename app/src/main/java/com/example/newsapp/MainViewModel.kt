@@ -1,12 +1,11 @@
 package com.example.newsapp
 
-import androidx.compose.runtime.State
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.example.newsapp.domain.usercases.AppEntryUsesCases
+import com.example.newsapp.domain.usercases.app_entry.AppEntryUsesCases
 import com.example.newsapp.presentation.nvgraph.Route
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.delay
