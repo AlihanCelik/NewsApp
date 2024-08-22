@@ -49,6 +49,7 @@ fun ArticleCard(
             .clip(MaterialTheme.shapes.medium),
         model = ImageRequest.Builder(context).data(article.urlToImage).build(),
             contentDescription =null )
+        Spacer(modifier = Modifier.width(ExtraSmallPadding2))
         Column(verticalArrangement = Arrangement.SpaceAround,
             modifier = Modifier
                 .padding(horizontal = ExtraSmallPadding)
