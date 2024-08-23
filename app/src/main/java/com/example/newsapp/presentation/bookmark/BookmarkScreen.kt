@@ -12,6 +12,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.colorResource
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.unit.dp
 import androidx.paging.compose.LazyPagingItems
 import com.example.newsapp.R
 import com.example.newsapp.domain.model.Article
@@ -29,7 +30,7 @@ fun BookmarkState(
         modifier = Modifier
             .fillMaxSize()
             .statusBarsPadding()
-            .padding(top = MediumPadding1, start = MediumPadding1, end = MediumPadding1)
+            .padding(top = MediumPadding1, start = 10.dp, end = 10.dp)
     ) {
         Text(
             text = "Bookmark",

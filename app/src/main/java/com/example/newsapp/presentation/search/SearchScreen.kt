@@ -8,6 +8,7 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.statusBarsPadding
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.unit.dp
 import androidx.paging.compose.collectAsLazyPagingItems
 import com.example.newsapp.domain.model.Article
 import com.example.newsapp.presentation.Dimens.MediumPadding1
@@ -26,8 +27,8 @@ fun SearchScreen(
         modifier = Modifier
             .padding(
                 top = MediumPadding1,
-                start = MediumPadding1,
-                end = MediumPadding1
+                start = 10.dp,
+                end = 10.dp
             )
             .statusBarsPadding()
             .fillMaxSize()

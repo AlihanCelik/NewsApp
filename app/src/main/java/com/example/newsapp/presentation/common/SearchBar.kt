@@ -9,6 +9,7 @@ import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.text.KeyboardActions
 import androidx.compose.foundation.text.KeyboardOptions
@@ -54,7 +55,7 @@ fun SearchBar(
         }
 
     }
-    Box (modifier=modifier){
+    Box (modifier=modifier.padding(end = 10.dp, start = 10.dp)){
         TextField(
             modifier = Modifier.fillMaxWidth().searcBarBorder(),
             value = text,

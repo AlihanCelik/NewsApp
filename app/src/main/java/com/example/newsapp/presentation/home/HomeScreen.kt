@@ -59,18 +59,16 @@ fun HomeScreen(article: LazyPagingItems<Article>,navigateToSearch:()->Unit,navig
         SearchBar(text = "", readOnly = true, onValueChange = {}, onClick = {
             navigateToSearch()
         }, onSearch = {})
-        Spacer(modifier = Modifier.height(ExtraSmallPadding2))
         Text(
             text = titles,
             modifier = Modifier
                 .fillMaxWidth()
-                .padding(MediumPadding1)
+                .padding(5.dp)
                 .basicMarquee(),
             fontSize = 12.sp,
             color = colorResource(id = R.color.placeholder)
         )
-        Spacer(modifier = Modifier.height(ExtraSmallPadding2))
-        ArticleList(articles = article, modifier = Modifier.padding(MediumPadding1),
+        ArticleList(articles = article,
             onClick = {
                 navigateToDetails(it)
             })
