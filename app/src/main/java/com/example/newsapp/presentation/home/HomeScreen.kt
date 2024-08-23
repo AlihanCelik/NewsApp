@@ -32,7 +32,7 @@ import com.example.newsapp.presentation.nvgraph.Route
 
 @OptIn(ExperimentalFoundationApi::class)
 @Composable
-fun HomeScreen(article: LazyPagingItems<Article>,navigate:(String)->Unit){
+fun HomeScreen(article: LazyPagingItems<Article>,navigateToSearch:()->Unit,navigateToDetails:(Article)->Unit){
     val titles by remember {
         derivedStateOf {
             if(article.itemCount>10){
@@ -57,7 +57,7 @@ fun HomeScreen(article: LazyPagingItems<Article>,navigate:(String)->Unit){
                 .padding(horizontal = MediumPadding1))
         Spacer(modifier = Modifier.height(MediumPadding1))
         SearchBar(text = "", readOnly = true, onValueChange = {}, onClick = {
-            navigate(Route.SearchScreen.route)
+            navigateToSearch()
         }, onSearch = {})
         Spacer(modifier = Modifier.height(ExtraSmallPadding2))
         Text(
@@ -72,7 +72,7 @@ fun HomeScreen(article: LazyPagingItems<Article>,navigate:(String)->Unit){
         Spacer(modifier = Modifier.height(ExtraSmallPadding2))
         ArticleList(articles = article, modifier = Modifier.padding(MediumPadding1),
             onClick = {
-                navigate(Route.DetailScreen.route)
+                navigateToDetails(it)
             })
 
     }

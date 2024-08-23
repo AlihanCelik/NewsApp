@@ -23,7 +23,7 @@ import com.example.newsapp.presentation.nvgraph.Route
 @Composable
 fun BookmarkState(
     state: BookmarkState,
-    navigate:(String)->Unit
+    navigateToDetails:(Article)->Unit
 ){
     Column(
         modifier = Modifier
@@ -37,7 +37,7 @@ fun BookmarkState(
             color = colorResource(id = R.color.text_title)
         )
         Spacer(modifier = Modifier.height(MediumPadding1))
-        ArticleList(articles = state.articles, onClick = {navigate(Route.DetailScreen.route)})
+        ArticleList(articles = state.articles, onClick = {navigateToDetails(it)})
         
     }
 }
