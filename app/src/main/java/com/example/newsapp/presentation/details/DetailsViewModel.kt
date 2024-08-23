@@ -18,6 +18,10 @@ class DetailsViewModel @Inject constructor(
 
     var sideEffect by mutableStateOf<String?>(null)
         private set
+    var isArticleSaved by mutableStateOf(false)
+        private set
+    var isBookmarked by mutableStateOf(false)
+        private set
 
     fun onEvent(event: DetailsEvent){
         when(event){
@@ -25,15 +29,20 @@ class DetailsViewModel @Inject constructor(
                 viewModelScope.launch {
                     val article=newsUseCases.selectArticle(event.article.url)
                     if(article==null){
+
                         upsertArticle(event.article)
                     }else{
                         deleteArticle(event.article)
                     }
+                    isArticleSaved = article == null
                 }
 
             }
             is DetailsEvent.RemoveSideEffect->{
                 sideEffect=null
+            }
+            is DetailsEvent.ToggleBookmark -> {
+                isBookmarked = !isBookmarked
             }
         }
     }

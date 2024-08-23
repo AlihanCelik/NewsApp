@@ -29,21 +29,21 @@ import com.example.newsapp.domain.model.Article
 import com.example.newsapp.presentation.Dimens.ArticleImageHeight
 import com.example.newsapp.presentation.Dimens.MediumPadding1
 import com.example.newsapp.presentation.details.components.DetailsTopBar
-import com.example.newsapp.presentation.nvgraph.Route
-import com.example.newsapp.presentation.search.SearchEvent
 import com.example.newsapp.ui.theme.NewsAppTheme
 
 @Composable
 fun DetailsScreen(
     article: Article,
     event: (DetailsEvent)->Unit,
-    navigationUp:()->Unit
+    navigationUp:()->Unit,
+    viewModel: DetailsViewModel
 ) {
     val context= LocalContext.current
     Column(modifier = Modifier
         .fillMaxSize()
         .statusBarsPadding()) {
         DetailsTopBar(
+            isBookmarked = viewModel.isBookmarked,
             onBrowsingClick = {
                 Intent(Intent.ACTION_VIEW).also {
                     it.data= Uri.parse(article.url)

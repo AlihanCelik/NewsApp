@@ -110,9 +110,11 @@ fun NewsNavigator(){
                 navController.previousBackStackEntry?.savedStateHandle?.get<Article?>("article")
                     ?.let {article->
                         DetailsScreen(
+                            viewModel = viewModel,
                             article =article ,
                             event = viewModel::onEvent,
-                            navigationUp = {navController.navigateUp()})
+                            navigationUp = {navController.navigateUp()}
+                        )
                     }
             }
 

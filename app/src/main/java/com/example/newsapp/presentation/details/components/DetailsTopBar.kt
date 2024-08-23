@@ -27,6 +27,7 @@ import com.example.newsapp.ui.theme.NewsAppTheme
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun DetailsTopBar(
+    isBookmarked: Boolean,
     onBrowsingClick:()->Unit,
     onShareClick:()->Unit,
     onBookmarkClick:()->Unit,
@@ -48,7 +49,12 @@ fun DetailsTopBar(
         },
         actions = {
             IconButton(onClick = onBookmarkClick) {
-            Icon(painter = painterResource(id = R.drawable.ic_bookmark), contentDescription =null )
+                val bookmarkIcon = if (isBookmarked) {
+                    R.drawable.ic_bookmarked
+                } else {
+                    R.drawable.ic_bookmark
+                }
+            Icon(painter = painterResource(id = bookmarkIcon), contentDescription =null )
 
             }
             IconButton(onClick = onShareClick) {
@@ -70,6 +76,7 @@ fun DetailsTopBarPreview(){
     NewsAppTheme {
         Box (modifier = Modifier.background(MaterialTheme.colorScheme.background)){
             DetailsTopBar(
+                isBookmarked = false,
                 onBrowsingClick = {},
                 onShareClick = {},
                 onBookmarkClick = {},
