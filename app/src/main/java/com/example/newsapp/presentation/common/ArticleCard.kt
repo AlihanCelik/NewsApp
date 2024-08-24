@@ -25,6 +25,7 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.unit.dp
 import androidx.constraintlayout.motion.widget.MotionScene.Transition.TransitionOnClick
 import coil.compose.AsyncImage
 import coil.request.ImageRequest
@@ -51,7 +52,7 @@ fun ArticleCard(
         model = ImageRequest.Builder(context).data(article.urlToImage).build(),
             contentDescription =null ,
             contentScale = ContentScale.Crop)
-        Spacer(modifier = Modifier.width(ExtraSmallPadding2))
+        Spacer(modifier = Modifier.width(10.dp))
         Column(verticalArrangement = Arrangement.SpaceAround,
             modifier = Modifier
                 .padding(horizontal = ExtraSmallPadding)
