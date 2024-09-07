@@ -6,9 +6,12 @@
 
 
 - JetpackCompose
-- MVVM
+- MVVM&MVI
 - Clean Architecture
 - Room
 - Dagger Hilt
 - Compose
+- Paging 3
+- Retrofit
+- DataStore Preferences
   
